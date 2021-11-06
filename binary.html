@@ -11,9 +11,8 @@
 <body>
 
 <header style ="background-color:white" "color:red">
-  <h2 style="color:black" "background-color:green"><b>AND Gate</b></h2>
+  <h2 style="color:black" "background-color:green"><b>Binary Notation</b></h2>
 </header>
-
 <section>
   <nav>
     <ul>
@@ -30,17 +29,43 @@
    <center></center>
    <p></p>
 
-    <p> This section contains information about AND gates! </p>
+    <p> BINARY Notation </p>
+    <p> This webpage serves as a Binary calculator by converting base 10 numbers to binary. </p>
 
-<p>This is an animation of an AND Logic Gate</p>
-<P> Turn the inputs on or off </p>
 
 <center>
-<button onclick="document.getElementById('myImage').src='and2off.png'">0 and 0</button>
-<button onclick="document.getElementById('myImage').src='andtopoff.png'">1 and 0</button>
-<button onclick="document.getElementById('myImage').src='andoff.png'">0 and 1</button>
-<button onclick="document.getElementById('myImage').src='andin2.png'">1 and 1</button><br><br>
-<img id="myImage" src="and2off.png" style="width:500px">
+<p>Enter first number:</p>
+<input type = "number" id="inputdec1" >
+<p></p>
+
+<p>Enter second number:</p>
+<input type = "number" id="inputdec2" >
+<p></p>
+
+<button onclick="decToBin()">Submit</button>
+<p></p>
+<p>BINARY Values : </p>
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+
+  
+  function decToBin() {
+  var num1 = document.getElementById("inputdec1").value;
+  var res1 = (num1 >>> 0).toString(2);
+  document.getElementById("demo").innerHTML = res1;
+  var num2 = document.getElementById("inputdec2").value;
+  var res2 = (num2 >>> 0).toString(2);
+  document.getElementById("demo2").innerHTML = res2;
+  var ans= +num1 + +num2;
+ 
+  }
+  
+</script>
+
+
 
 </center>
 <footer>
